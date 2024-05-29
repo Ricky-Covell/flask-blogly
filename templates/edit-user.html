@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Edit User
+{% endblock %}
+
+{% block content %}
+<form method="POST">
+    <div>
+        <input type="text" id="first_name_edit" name="first_name_edit" value="{{ user.first_name }}" required>
+        <input type="text" id="last_name_edit" name="last_name_edit" value="{{ user.last_name }}" required>
+        <input type="text" id="img_url_edit" name="img_url_edit" value="{{ user.img_url }}" required>
+    </div>
+
+    <div>
+        <a href="/users">Cancel</a>
+        <button type="submit">Save Changes</button>
+    </div>
+</form>
+{% endblock %}
