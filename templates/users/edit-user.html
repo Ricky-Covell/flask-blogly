@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block content %}
-<form method="POST">
+<form>
     <div>
         <input type="text" id="first_name_edit" name="first_name_edit" value="{{ user.first_name }}" required>
         <input type="text" id="last_name_edit" name="last_name_edit" value="{{ user.last_name }}" required>
@@ -13,8 +13,8 @@
     </div>
 
     <div>
-        <a href="/users">Cancel</a>
-        <button type="submit">Save Changes</button>
+        <button formmethod="GET" formaction="/users/{{ user.id }}">Cancel</button>
+        <button formmethod="POST" formaction="/users/{{ user.id }}/edit">Save Changes</button>
     </div>
 </form>
 {% endblock %}
