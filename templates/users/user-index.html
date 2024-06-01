@@ -1,5 +1,9 @@
 {% extends 'base.html' %}
 
+{% block pagename %}
+All Users
+{% endblock %}
+
 {% block title %}
 All Users
 {% endblock %}
@@ -16,5 +20,8 @@ All Users
 
 <form action="/users/new">
     <input type="submit" value="Add User">
+    <div>
+        <button formaction="/" formmethod="GET">Go Home</button>
+    </div>
 </form>
 {% endblock %}

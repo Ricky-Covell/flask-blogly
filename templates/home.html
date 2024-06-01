@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block pagename %}
+Home
+{% endblock %}
+
+{% block title %}
+Home
+{% endblock %}
+
+{% block content %}
+<form method="GET">
+    <button formaction="/users">Users</button>
+    <button formaction="/posts">Posts</button>
+    <button formaction="/tags">Tags</button>
+</form>
+{% endblock %}

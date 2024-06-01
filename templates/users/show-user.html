@@ -1,5 +1,9 @@
 {% extends 'base.html' %}
 
+{% block pagename %}
+    {user.first_name} {user.last_name}
+{% endblock %}
+    
 {% block title %}
     User Page
 {% endblock %}

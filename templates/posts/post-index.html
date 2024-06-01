@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block pagename %}
+All Posts
+{% endblock %}
+
+{% block title %}
+All Posts
+{% endblock %}
+
+{% block content %}
+<div>
+    <ul>
+        {% for post in posts %}
+        <li>
+            <a href="/posts/{{ post.id }}">{{ post.title }}</a>
+        </li>
+        {% endfor %}    
+     </ul>
+</div>
+<form>
+    <div>
+        <button formaction="/" formmethod="GET">Go Home</button>
+    </div>
+</form>
+{% endblock %}
